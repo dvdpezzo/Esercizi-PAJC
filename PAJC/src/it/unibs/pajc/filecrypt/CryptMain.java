@@ -16,14 +16,14 @@ public class CryptMain {
 			file = new File("crypted.txt");
 			fw = new FileWriter(file);
 			fw.write(s);
-			fw.flush();
-			fw.close();
+
 		}
 		catch(IOException ex) {
 			System.out.println("An exception has occurred");
 		}
 		finally {
 			try {
+			fw.flush();
 			fw.close();
 			}
 			catch(Exception ex) {
